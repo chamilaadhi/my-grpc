@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.chamila.grpc.gen";
+option java_outer_classname = "MyServiceProto";
+
+service MyService {
+    rpc echo(Request) returns (Response);
+    
+}
+
+message Request {
+    string request = 1;
+}
+
+message Response {
+    string response = 1;
+}
+  
